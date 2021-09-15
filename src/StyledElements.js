@@ -37,11 +37,11 @@ export const HeaderWrapper = styled.div`
 export const TitleWrapper = styled(Link)`
   display: block;
   color: #4a4a4a;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-left: -30px;
   @media screen and (max-width: 1800px) {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     color: white;
   }
 
@@ -141,9 +141,6 @@ export const ItemWrapper = styled.div`
   width: 1800px;
   height: 800px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -183,7 +180,7 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledTitle = styled.div`
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #4a4a4a;
   &:hover {
   }
@@ -265,7 +262,7 @@ export const InfoTitle = styled.div`
   font-size: 5rem;
   text-align: center;
   border-bottom: 1px solid grey;
-  width: 500px;
+  width: 600px;
   padding: 20px;
   margin-bottom: 40px;
 `;
@@ -285,15 +282,18 @@ export const TitleIconRight = styled(GiCurledLeaf)`
 `;
 
 export const AboutMeArea = styled.div`
-  width: 1400px;
+  width: 1650px;
   height: 500px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
 `;
 
 export const ProfileWrapper = styled.div`
 display: flex;
 justify-content: space-around;
-  width: 400px;
+  width: 550px;
   height: 240px;
 `;
 
@@ -312,8 +312,8 @@ export const ProfileText = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 240px;
-  height: 100px;
+  width: 340px;
+  height: 120px;
 `
 export const ProfileTitle = styled.div`
   font-size: 2.5rem;
@@ -321,6 +321,6 @@ export const ProfileTitle = styled.div`
 `;
 
 export const ProfileDetail = styled.div`
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
 `;

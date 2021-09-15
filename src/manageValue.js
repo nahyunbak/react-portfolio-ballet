@@ -2,7 +2,7 @@ import {  createSlice } from '@reduxjs/toolkit';
 
 
 const initialState = {
-  title: '개발자 박나현',
+  title: '박나현의 포트폴리오',
     currentLanguage: 'korean',
     changableLanguage: '영어',
     menu1:'자기소개',
@@ -25,7 +25,7 @@ export const manageValue = createSlice({
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
  
-    state.title= '개발자 박나현';
+    state.title= '박나현의 포트폴리오';
     state.currentLanguage= 'korean';
     state.changableLanguage= '영어';
     state.menu1='자기소개';
@@ -41,7 +41,7 @@ export const manageValue = createSlice({
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
       
-    state.title= 'DEVELOPER NAHYEON.BAK';
+    state.title= 'NAHYEON\'S PORTFOLIO';
     state.currentLanguage= 'english';
     state.changableLanguage= 'KOREAN';
     state.menu1='ABOUT ME';
