@@ -5,7 +5,6 @@ import {
   ExchangeIcon,
   HeaderWrapper,
   InfoTitle,
-  InfoTitleWrapper,
   InfoWrapper,
   ItemWrapper,
   LanguageToggleWrapper,
@@ -16,8 +15,12 @@ import {
   MobileMenuItem,
   MobileMenuWrapper,
   ProfileBirth,
+  ProfileCall,
   ProfileDetail,
+  ProfileLocation,
+  ProfileMail,
   ProfileName,
+  ProfileStudy,
   ProfileText,
   ProfileTitle,
   ProfileWrapper,
@@ -54,24 +57,6 @@ const App = () => {
     }
   };
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      slidesToSlide: 3, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-  };
-
   return (
     <>
       <Wrapper>
@@ -101,7 +86,13 @@ const App = () => {
           <MobileMenuItem>{state.menu5}</MobileMenuItem>
         </MobileMenuWrapper>
         <MainWrapper>
-          <ItemWrapper name="aboutme">
+          <ItemWrapper
+          to="aboutme"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            >
             <StyledImg src="../public/aboutme.png" />
             <StyledTitle>{state.menu1}</StyledTitle>
           </ItemWrapper>
@@ -123,7 +114,7 @@ const App = () => {
           </ItemWrapper>
         </MainWrapper>
         <InfoWrapper>
-          <AboutMeWrapper>
+          <AboutMeWrapper name="aboutme">
             <InfoTitle>
               <TitleIconLeft /> {state.menu1} <TitleIconRight />
             </InfoTitle>
@@ -144,28 +135,28 @@ const App = () => {
                 </ProfileText>
               </ProfileWrapper>
               <ProfileWrapper>
-                <ProfileName />
+                <ProfileLocation />
                 <ProfileText>
                   <ProfileTitle>주소지</ProfileTitle>
                   <ProfileDetail>경기도 안양시</ProfileDetail>
                 </ProfileText>
               </ProfileWrapper>
               <ProfileWrapper>
-                <ProfileName />
+                <ProfileCall />
                 <ProfileText>
                   <ProfileTitle>연락처</ProfileTitle>
                   <ProfileDetail>010-9167-5977</ProfileDetail>
                 </ProfileText>
               </ProfileWrapper>
               <ProfileWrapper>
-                <ProfileName />
+                <ProfileMail />
                 <ProfileText>
                   <ProfileTitle>이메일</ProfileTitle>
                   <ProfileDetail>nahyunbak@naver.com</ProfileDetail>
                 </ProfileText>
               </ProfileWrapper>
               <ProfileWrapper>
-                <ProfileName />
+                <ProfileStudy />
                 <ProfileText>
                   <ProfileTitle>학력</ProfileTitle>
                   <ProfileDetail>경인교육대학교

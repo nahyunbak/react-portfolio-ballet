@@ -1,9 +1,10 @@
 import styled, { css } from "styled-components";
 import { GiHamburgerMenu, GiCurledLeaf } from "react-icons/gi";
-import { FaExchangeAlt, FaLink } from "react-icons/fa";
+import { FaExchangeAlt, FaPencilAlt } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { BsFillPersonFill, BsCalendar } from "react-icons/bs";
-
+import { IoLocationSharp, IoCall } from "react-icons/io5";
+import { AiFillMail} from "react-icons/ai";
 
 export const Wrapper = styled.div`
   width: 100vw;
@@ -137,7 +138,8 @@ export const MainWrapper = styled.div`
   } ;
 `;
 
-export const ItemWrapper = styled.div`
+export const ItemWrapper = styled(Link)`
+  display: block;
   width: 1800px;
   height: 800px;
   display: flex;
@@ -247,7 +249,8 @@ export const InfoWrapper = styled.div`
   height: 500px;
 `;
 
-export const AboutMeWrapper = styled.div`
+export const AboutMeWrapper = styled(Link)`
+display: block;
   width: 100%;
   height: 1000px;
   display: flex;
@@ -299,7 +302,7 @@ justify-content: space-around;
 
 
 const aboutMeImg = css`
-  font-size: 7rem;
+  font-size: 5rem;
 `
 export const ProfileName = styled(BsFillPersonFill)`
   ${aboutMeImg}
@@ -307,6 +310,21 @@ export const ProfileName = styled(BsFillPersonFill)`
 
 export const ProfileBirth = styled(BsCalendar)`
   ${aboutMeImg}
+`
+
+export const ProfileLocation = styled(IoLocationSharp)`
+  ${aboutMeImg}
+`
+
+export const ProfileCall = styled(IoCall)`
+  ${aboutMeImg}
+`
+
+export const ProfileMail = styled(AiFillMail)`
+  ${aboutMeImg}
+`
+export const ProfileStudy = styled(FaPencilAlt)`
+${aboutMeImg}
 `
 export const ProfileText = styled.div`
   display: flex;
