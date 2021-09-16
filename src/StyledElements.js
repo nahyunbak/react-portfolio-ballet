@@ -3,7 +3,7 @@ import { GiHamburgerMenu, GiCurledLeaf } from "react-icons/gi";
 import { FaExchangeAlt, FaPencilAlt } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { BsFillPersonFill, BsCalendar } from "react-icons/bs";
-import { IoLocationSharp, IoCall } from "react-icons/io5";
+import { IoLocationSharp, IoCall, IoFlowerOutline, IoFlower } from "react-icons/io5";
 import { AiFillMail} from "react-icons/ai";
 
 export const Wrapper = styled.div`
@@ -242,24 +242,14 @@ export const MobileMenuItem = styled(Link)`
   }
 `;
 
-// info 창-aboutMe 
 
+//info 공통 
 export const InfoWrapper = styled.div`
   width: 100%;
   height: 500px;
 `;
 
-export const AboutMeWrapper = styled(Link)`
-display: block;
-  width: 100%;
-  height: 1000px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  background-color: #e8e8e8;
-  margin-top: 400px;
-`;
+
 
 export const InfoTitle = styled.div`
   font-size: 5rem;
@@ -282,6 +272,77 @@ export const TitleIconLeft = styled(GiCurledLeaf)`
 export const TitleIconRight = styled(GiCurledLeaf)`
   ${infoIconStyle}
   transform: rotateY(180deg);
+`;
+
+
+//info 창- cover
+
+/**
+ * <CoverWrapper>
+            <LineWrapper>
+              <FlowerOne/>
+              <FlowerTwo/>
+              <FlowerOne/>
+            </LineWrapper>
+            <TypoWrapper></TypoWrapper>
+            <LineWrapper>
+              <FlowerOne/>
+              <FlowerTwo/>
+              <FlowerOne/>
+            </LineWrapper>
+          </CoverWrapper>
+ * 
+
+          IoFlowerOutline, IoFlower 
+ */
+
+export const CoverWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  height: 300px;
+
+  
+`
+
+export const LineWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+`
+
+
+export const FlowerOne = styled(IoFlowerOutline)`
+  font-size: 2.2rem;
+`
+
+export const FlowerTwo = styled(IoFlower )`
+font-size: 2rem;
+`
+
+export const TypoWrapper = styled.div`
+margin: 30px;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+`
+
+// info 창-aboutMe 
+
+
+export const AboutMeWrapper = styled(Link)`
+display: block;
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8e8e8;
+  margin-top: 400px;
 `;
 
 export const AboutMeArea = styled.div`
@@ -342,3 +403,7 @@ export const ProfileDetail = styled.div`
   font-size: 1.8rem;
   font-weight: 500;
 `;
+
+
+
+//

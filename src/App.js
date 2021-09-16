@@ -2,13 +2,17 @@ import React, { useState } from "react";
 import {
   AboutMeArea,
   AboutMeWrapper,
+  CoverWrapper,
   ExchangeIcon,
+  FlowerOne,
+  FlowerTwo,
   HeaderWrapper,
   InfoTitle,
   InfoWrapper,
   ItemWrapper,
   LanguageToggleWrapper,
   LanguageType,
+  LineWrapper,
   MainWrapper,
   MenuIcon,
   MenuWrapper,
@@ -29,6 +33,7 @@ import {
   TitleIconLeft,
   TitleIconRight,
   TitleWrapper,
+  TypoWrapper,
   Wrapper,
 } from "./StyledElements";
 
@@ -114,6 +119,31 @@ const App = () => {
           </ItemWrapper>
         </MainWrapper>
         <InfoWrapper>
+          <CoverWrapper>
+            <LineWrapper>
+              <FlowerOne/>
+              <FlowerTwo/>
+              <FlowerOne/>
+            </LineWrapper>
+            <TypoWrapper>
+            안녕하세요.
+            <br/>
+            자바스크립트를 사랑하는 프론트엔드 개발자입니다. 
+            <br/>
+            어제보다 나은 개발자가 되고자 부단히 노력중입니다.
+            <br/>
+            인생을 전부 산 건 아니지만, 노력은 절 배신하지 않는다는 것을 알기 때문입니다.
+            <br/>
+            빠른 손, 뛰어난 영어 구사력, 개발을 향한 무한한 애정이 제 장점입니다.
+            <br/>
+            다시 일하고 싶은 개발자로 기억되고 싶습니다.  
+            </TypoWrapper>
+            <LineWrapper>
+              <FlowerOne/>
+              <FlowerTwo/>
+              <FlowerOne/>
+            </LineWrapper>
+          </CoverWrapper>
           <AboutMeWrapper name="aboutme">
             <InfoTitle>
               <TitleIconLeft /> {state.menu1} <TitleIconRight />
@@ -167,6 +197,8 @@ const App = () => {
               </ProfileWrapper>
             </AboutMeArea>
           </AboutMeWrapper>
+
+
         </InfoWrapper>
       </Wrapper>
     </>
