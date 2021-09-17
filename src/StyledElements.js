@@ -25,6 +25,7 @@ export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @media screen and (max-width: 1800px) {
     width: 100%;
     border-radius: 50px;
@@ -131,10 +132,7 @@ export const MainWrapper = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 1800px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
   } ;
 `;
 
@@ -257,7 +255,7 @@ export const InfoTitle = styled.div`
   border-bottom: 1px solid grey;
   width: 600px;
   padding: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 `;
 
 export const infoIconStyle = css`
@@ -301,10 +299,23 @@ export const CoverWrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-top: 100px;
-  height: 300px;
+  margin-top: 50px;
+  height: 600px;
+  padding: 100px;
+  @media screen and (max-width: 1800px) {
+    margin-top: -100px;
+  } ;
 
   
+`
+
+export const HrCover = styled.hr`
+  width: 600px;
+color: grey;
+margin-bottom: 100px;
+@media screen and (max-width: 1800px) {
+    display: none;
+  } ;
 `
 
 export const LineWrapper = styled.div`
@@ -324,33 +335,52 @@ font-size: 2rem;
 `
 
 export const TypoWrapper = styled.div`
-margin: 30px;
+margin: 50px;
+height: 300px;
   font-size: 2rem;
-  text-align: center;
-  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 `
 
+export const TypoLine = styled.div`
+text-align: center;
+  letter-spacing: 2px;
+`
 // info 창-aboutMe 
 
 
 export const AboutMeWrapper = styled(Link)`
 display: block;
   width: 100%;
-  height: 1000px;
+  padding-top: 100px;
+padding-bottom: 100px;
+height: auto;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   background-color: #e8e8e8;
-  margin-top: 400px;
 `;
 
 export const AboutMeArea = styled.div`
-  width: 1650px;
-  height: 500px;
+  width: 1660px;
+  height: 600px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+ 
+  @media screen and (max-width: 1600px) {
+    width: 1200px;
+    height: 1000px;
+  }
+  @media screen and (max-width: 1200px) {
+    width: 600px;
+    height: 1800px;
+  }
+
   
 `;
 
@@ -403,6 +433,99 @@ export const ProfileDetail = styled.div`
   font-size: 1.8rem;
   font-weight: 500;
 `;
+
+
+
+export const SkillWrapper = styled(Link)`
+display: block;
+width: 100%;
+padding-top: 100px;
+padding-bottom: 100px;
+height: auto;
+
+
+
+  background-color: #ffeae8;
+  flex-direction: column;
+
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+
+`
+
+
+
+export const SkillItemArea = styled.div`
+display: flex;
+align-items: space-around;
+flex-direction: column;
+flex-wrap: wrap;
+@media screen and (max-width: 700px) {
+    width: 600px;
+    height: 1500px;
+  }
+  @media screen and (max-width: 1800px) {
+    width: 1000px;
+    height: 2000px;
+  }
+
+  width: 1600px;
+  height: 1500px;
+
+  
+
+  
+
+
+`
+export const SkillItemWrapper = styled.div`
+  padding: 22px;
+  border-radius: 15px;
+  background-color: white;
+  width: 400px;
+  margin-top: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: translateY(30px);
+  }
+  
+`
+export const SkillItemTitle = styled.div`
+  padding: 15px;
+  border-bottom: 1px solid grey;
+  font-size: 2rem;
+  margin-bottom: 20px;
+`
+
+export const SkillImgFront = styled.img`
+  width: 400px;
+  height: 800px;
+
+`
+
+export const SkillImgBack = styled.img`
+  width: 400px;
+  height: 533px;
+`
+
+export const SkillImgVersion = styled.img`
+  width: 400px;
+  height: 400px;
+`
+
+export const SkillImgCertificate = styled.img`
+  width: 400px;
+  height: 106px;
+`
+
+export const SkillImgDeploy = styled.img`
+  width: 400px;
+  height: 420px;
+`
 
 
 

@@ -3,10 +3,12 @@ import {
   AboutMeArea,
   AboutMeWrapper,
   CoverWrapper,
+  DIV,
   ExchangeIcon,
   FlowerOne,
   FlowerTwo,
   HeaderWrapper,
+  HrCover,
   InfoTitle,
   InfoWrapper,
   ItemWrapper,
@@ -28,11 +30,22 @@ import {
   ProfileText,
   ProfileTitle,
   ProfileWrapper,
+  SkillImg,
+  SkillImgBack,
+  SkillImgCertificate,
+  SkillImgDeploy,
+  SkillImgFront,
+  SkillImgVersion,
+  SkillItemArea,
+  SkillItemTitle,
+  SkillItemWrapper,
+  SkillWrapper,
   StyledImg,
   StyledTitle,
   TitleIconLeft,
   TitleIconRight,
   TitleWrapper,
+  TypoLine,
   TypoWrapper,
   Wrapper,
 } from "./StyledElements";
@@ -40,6 +53,13 @@ import {
 import { useMediaQuery } from "react-responsive";
 import { useSelector, useDispatch } from "react-redux";
 import { changeToEnglish, changeToKorean, selectState } from "./manageValue";
+import { Parallax } from 'react-parallax';
+import imgSrc from './img/aboutme.png';
+import frontEnd from './img/frontend.png'
+import backEnd from './img/backend.png'
+import certificate from './img/certificate.png'
+import version from './img/version.png'
+import deployment from './img/deploy.png'
 
 const App = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1800px)" });
@@ -85,7 +105,13 @@ const App = () => {
           >
             {state.menu1}
           </MobileMenuItem>
-          <MobileMenuItem>{state.menu2}</MobileMenuItem>
+          <MobileMenuItem
+          to="skills"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >{state.menu2}</MobileMenuItem>
           <MobileMenuItem>{state.menu3}</MobileMenuItem>
           <MobileMenuItem>{state.menu4}</MobileMenuItem>
           <MobileMenuItem>{state.menu5}</MobileMenuItem>
@@ -98,10 +124,17 @@ const App = () => {
             offset={0}
             duration={500}
             >
-            <StyledImg src="../public/aboutme.png" />
+            <StyledImg src={imgSrc} />
             <StyledTitle>{state.menu1}</StyledTitle>
           </ItemWrapper>
-          <ItemWrapper>
+          <ItemWrapper
+          
+          to="skills"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            >
             <StyledImg src="../public/career.png" />
             <StyledTitle>{state.menu2}</StyledTitle>
           </ItemWrapper>
@@ -120,23 +153,18 @@ const App = () => {
         </MainWrapper>
         <InfoWrapper>
           <CoverWrapper>
+          <HrCover/>
             <LineWrapper>
               <FlowerOne/>
               <FlowerTwo/>
               <FlowerOne/>
             </LineWrapper>
             <TypoWrapper>
-            안녕하세요.
-            <br/>
-            자바스크립트를 사랑하는 프론트엔드 개발자입니다. 
-            <br/>
-            어제보다 나은 개발자가 되고자 부단히 노력중입니다.
-            <br/>
-            인생을 전부 산 건 아니지만, 노력은 절 배신하지 않는다는 것을 알기 때문입니다.
-            <br/>
-            빠른 손, 뛰어난 영어 구사력, 개발을 향한 무한한 애정이 제 장점입니다.
-            <br/>
-            다시 일하고 싶은 개발자로 기억되고 싶습니다.  
+            <TypoLine> 안녕하세요.</TypoLine>
+            <TypoLine> 자바스크립트를 사랑하는 프론트엔드 개발자입니다. </TypoLine>
+            <TypoLine> 빠른 손, 뛰어난 영어 구사력, 개발을 향한 무한한 애정이 제 장점입니다.</TypoLine>
+            <TypoLine> 항상 어제보다 나은 개발자가 되고자 노력합니다.</TypoLine>
+            <TypoLine> 인생을 전부 산 건 아니지만, 노력이 사람을 어디까지 바꿀 수 있는지 알기 때문입니다.</TypoLine>
             </TypoWrapper>
             <LineWrapper>
               <FlowerOne/>
@@ -148,12 +176,11 @@ const App = () => {
             <InfoTitle>
               <TitleIconLeft /> {state.menu1} <TitleIconRight />
             </InfoTitle>
-
-            <AboutMeArea>
+            <AboutMeArea >
               <ProfileWrapper>
                 <ProfileName />
                 <ProfileText>
-                  <ProfileTitle>이름</ProfileTitle>
+                  <ProfileTitle >이름</ProfileTitle>
                   <ProfileDetail>박나현</ProfileDetail>
                 </ProfileText>
               </ProfileWrapper>
@@ -196,10 +223,47 @@ const App = () => {
                 </ProfileText>
               </ProfileWrapper>
             </AboutMeArea>
+            
           </AboutMeWrapper>
+          <SkillWrapper name="skills">
+          <InfoTitle>
+              <TitleIconLeft /> {state.menu2} <TitleIconRight />
+            </InfoTitle>
+          <SkillItemArea>
+          <SkillItemWrapper>
+            <SkillItemTitle>Front-end</SkillItemTitle>
+            <SkillImgFront src={frontEnd}/>
+          </SkillItemWrapper>
+          <SkillItemWrapper>
+            <SkillItemTitle>Back-end</SkillItemTitle>
+            <SkillImgBack src={backEnd}/>
+          </SkillItemWrapper>
+          <SkillItemWrapper>
+            <SkillItemTitle>Version Control</SkillItemTitle>
+            <SkillImgVersion src={version}/>
+          </SkillItemWrapper>
+          
+          <SkillItemWrapper>
+            <SkillItemTitle>Deployment</SkillItemTitle>
+            <SkillImgDeploy src={deployment}/>
+          </SkillItemWrapper>
+          <SkillItemWrapper>
+            <SkillItemTitle>Certificate</SkillItemTitle>
+            <SkillImgCertificate src={certificate}/>
+          </SkillItemWrapper>
+     
+          
+          </SkillItemArea>
+          
+          
+          
+          </SkillWrapper>
+
 
 
         </InfoWrapper>
+        
+      
       </Wrapper>
     </>
   );
