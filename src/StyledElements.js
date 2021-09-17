@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { GiHamburgerMenu, GiCurledLeaf } from "react-icons/gi";
 import { FaExchangeAlt, FaPencilAlt } from "react-icons/fa";
 import { Link } from "react-scroll";
+
 import { BsFillPersonFill, BsCalendar } from "react-icons/bs";
 import { IoLocationSharp, IoCall, IoFlowerOutline, IoFlower } from "react-icons/io5";
 import { AiFillMail} from "react-icons/ai";
@@ -529,4 +530,65 @@ export const SkillImgDeploy = styled.img`
 
 
 
-//
+//Archive 
+
+export const ArchiveWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e2edd8;
+  padding-top: 100px;
+padding-bottom: 100px;
+`
+
+export const ArchiveArea = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+  height:  500px;
+
+`
+
+export const ArchiveItem = styled.div`
+  padding: 35px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 45px;
+  width: 500px;
+  height: 340px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  &:hover {
+    transform: translateY(20px);
+  }
+`
+export const ArchiveImg = styled.img`
+  width: 250px;
+  height: 80px;
+  margin-bottom: 30px;
+`
+
+
+export const ArchiveP = styled.p`
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+`
+
+export const ArchiveLink = styled.a`
+  font-size: 1.5rem;
+  cursor:pointer;
+
+`
+export const ArchiveUl= styled.ul`
+  font-size: 1.5rem;
+  margin-top: 20px;
+`
+export const ArchiveLi = styled.li`
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  line-height: 120%;
+`
+

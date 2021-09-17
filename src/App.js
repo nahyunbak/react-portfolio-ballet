@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import {
   AboutMeArea,
   AboutMeWrapper,
+  ArchiveArea,
+  ArchiveImg,
+  ArchiveItem,
+  ArchiveLi,
+  ArchiveLink,
+  ArchiveP,
+  ArchiveUl,
+  ArchiveWrapper,
   CoverWrapper,
   DIV,
   ExchangeIcon,
@@ -60,6 +68,8 @@ import backEnd from './img/backend.png'
 import certificate from './img/certificate.png'
 import version from './img/version.png'
 import deployment from './img/deploy.png'
+import github from './img/github.png'
+import velog from './img/velog.png'
 
 const App = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1800px)" });
@@ -162,9 +172,9 @@ const App = () => {
             <TypoWrapper>
             <TypoLine> 안녕하세요.</TypoLine>
             <TypoLine> 자바스크립트를 사랑하는 프론트엔드 개발자입니다. </TypoLine>
-            <TypoLine> 빠른 손, 뛰어난 영어 구사력, 개발을 향한 무한한 애정이 제 장점입니다.</TypoLine>
+            <TypoLine> 빠른 손, 유창한 영어 구사력, 개발을 향한 무한한 애정이 제 장점입니다.</TypoLine>
             <TypoLine> 항상 어제보다 나은 개발자가 되고자 노력합니다.</TypoLine>
-            <TypoLine> 인생을 전부 산 건 아니지만, 노력이 사람을 어디까지 바꿀 수 있는지 알기 때문입니다.</TypoLine>
+            <TypoLine> 인생을 전부 산 건 아니지만, 노력이 사람을 어디까지 바꿔놓을 수 있는지 알기 때문입니다.</TypoLine>
             </TypoWrapper>
             <LineWrapper>
               <FlowerOne/>
@@ -258,6 +268,35 @@ const App = () => {
           
           
           </SkillWrapper>
+          <ArchiveWrapper>
+          <InfoTitle>
+              <TitleIconLeft /> {state.menu3} <TitleIconRight />
+            </InfoTitle>
+          <ArchiveArea>
+          <ArchiveItem>
+          <ArchiveImg src={github}/>
+          <ArchiveP> <strong>소스 코드 저장소</strong>입니다.</ArchiveP>
+          <ArchiveLink href="https://github.com/nahyunbak/">https://github.com/nahyunbak/</ArchiveLink>
+          <ArchiveUl>
+          <ArchiveLi>✔ 개인 프로젝트를 기록하고 있습니다.</ArchiveLi>         
+          <ArchiveLi>✔ 알고리즘을 연습하고 있습니다.</ArchiveLi>         
+          <ArchiveLi>✔ 다양한 오픈소스 프로젝트에 참여할 계획을 세우고 있습니다.</ArchiveLi>         
+          </ArchiveUl>
+          </ArchiveItem>
+
+          <ArchiveItem>
+          <ArchiveImg src={velog}/>
+          <ArchiveP> <strong>개인 공부용 블로그</strong>입니다.</ArchiveP>
+          <ArchiveLink href="https://velog.io/@nahyunbak">https://velog.io/@nahyunbak</ArchiveLink>
+          <ArchiveUl>
+          <ArchiveLi>✔ 자바스크립트 중심의 개인 기술 블로그입니다.</ArchiveLi>         
+          <ArchiveLi>✔ 책과 강의, 공식문서, 디버깅 회고록, 개인 프로젝트를 기록하고 있습니다.</ArchiveLi>               
+          </ArchiveUl>
+          </ArchiveItem>
+
+          </ArchiveArea>
+          
+          </ArchiveWrapper>
 
 
 
