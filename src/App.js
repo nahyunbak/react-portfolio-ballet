@@ -409,7 +409,7 @@ const App = () => {
               </ArchiveItem>
 
               <ArchiveItem>
-                <ArchiveImg src={velog} />
+                <ArchiveImg src="../public/velog.png" />
                 <ArchiveP>
                   {" "}
                   <strong>개인 공부용 블로그</strong>입니다.
@@ -510,7 +510,7 @@ const App = () => {
             </InfoTitle>
             <CareerArea>
               <CareerImgArea>
-                <CareerImg src={girl} />
+                <CareerImg src = "../public/myphoto.png" />
 
                 <CareerName>박나현</CareerName>
               </CareerImgArea>
